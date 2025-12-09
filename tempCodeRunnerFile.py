@@ -1,1 +1,0 @@
-print("Please choose an option:\n1.Encrypt the text.\n2.Decrypt the text.")
