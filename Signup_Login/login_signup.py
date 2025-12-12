@@ -94,7 +94,7 @@ def sign_up(): #Sign up account
                 if (character.islower()):
                     has_lower=True        #lower check
         if (has_number and has_special and has_upper and has_lower):
-            print("Sign up seccessfully!!!")
+            print("Sign up seccessfully!!!\n\n")
             save_data_to_File(dict_store_account, "DATA/account.txt", username, password)
             Password_Strengh_Analyzer.history_account(username)
             part = "History_each_user/" + username + ".txt"
@@ -114,7 +114,7 @@ class authentication:
 
             tool_option.tool_option(self.username)
         else:
-            print("Invalid password!!!")
+            print("Invalid password!!!\n\n")
       
     def getter_password(self):
         return self.__password    
