@@ -1,4 +1,4 @@
-from getpass import getpass
+from Tool_Option import tool_option
 
 dict_file_history = {} #store username with file.txt to file : history_dict.txt
 
@@ -23,6 +23,8 @@ def save_data_to_File(dict, filename, key, value):#save data from dictionary to 
 
 
 def main_password_check(username):
+    tool_option.loading_display()
+    tool_option.clear_after(0.1)
     while True:
 
         print("┌───────────────────────────────┐")
@@ -46,6 +48,7 @@ def main_password_check(username):
             display_history(username)
             continue
         elif choice == "E":
+            print("Exiting program.")
             break
 
 class Password:

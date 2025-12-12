@@ -43,6 +43,8 @@ class EncryptionDecryption(Key):
         return decrypted.decode()
 
 def display_and_execute():
+    tool_option.loading_display()
+    tool_option.clear_after(0.1)
     re_file =0
     obj = EncryptionDecryption()
     if not os.path.exists("Encryption_Decryption/public.pem") or not os.path.exists("Encryption_Decryption/private.pem"):
