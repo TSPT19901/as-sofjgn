@@ -1,0 +1,3 @@
+Long = History_each_user/Long.txt
+Pheak = History_each_user/Pheak.txt
+Leangsiv = History_each_user/Leangsiv.txt
