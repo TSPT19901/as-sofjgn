@@ -1,5 +1,6 @@
 from Tool_Option import tool_option
 from Password_Strengh_Analyzer import Password_Strengh_Analyzer
+from getpass import getpass
 
 dict_store_account = {} #store username password to file : account.txt
 
@@ -121,7 +122,7 @@ def login(): #login account
         username = input("Username: ")
         if username in dict_store_account:
             user1 = authentication(username , dict_store_account[username]) #object and pass value to attribute of class
-            password = input("Password: ")
+            password = getpass("Password: ")
             user1.compare_private_password(password)
         else:
             print("Username does not exist!!!\n\n") 
