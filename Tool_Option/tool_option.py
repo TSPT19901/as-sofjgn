@@ -39,6 +39,6 @@ def clear_after(seconds):
 
 def loading_display():
     for i in range(10):
-        sys.stdout.write("\r\n\nLoading" + "." * (i % 4))
+        sys.stdout.write("\r\n\n      Loading" + "." * (i % 4))
         sys.stdout.flush()
         time.sleep(0.5)
