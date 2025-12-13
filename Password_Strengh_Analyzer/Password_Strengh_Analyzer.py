@@ -88,11 +88,15 @@ class Character_12(Password):
         if self.check_is_Case() and self.check_is_Num() and self.check_is_SC():
             temp = 99
             print("Password strengh: 99%")
-            print("Your password is extremely strong. Perfect!")
+            print("Your password is extremely strong. Perfect!\n\n\n")
         elif self.check_is_Case() and self.check_is_Num():
             temp = 95
             print("Password strengh: 95%")
-            print("Excellent! But adding a special character can make it even stronger.")
+            print("Excellent! But adding a special character can make it even stronger.\n\n\n")
+        elif self.check_is_Num():
+            temp = 90
+            print("Password strengh: 90%")
+            print("Good password, but try to add more character or special character.\n\n\n")
         return temp
         
 class Character_8(Password):
@@ -105,8 +109,8 @@ class Character_8(Password):
             print("Your password is too short. Please use at least 8 characters!!!\n\n")
         else:
             if self.check_is_Case() and self.check_is_Num() and self.check_is_SC():
-                temp = 90
-                print("Password strengh: 90%")
+                temp = 85
+                print("Password strengh: 85%")
                 print("Great! Your password is very strong and secure.\n\n")
             elif self.check_is_Case() and self.check_is_Num():
                 temp = 80
@@ -127,7 +131,7 @@ def check_password(username):
     user_input = input("Enter your password to check:")
 
     if len(user_input) > 20:
-        print("Your password too long!!!")
+        print("Your password too long!!!\n\n\n")
     elif len(user_input) < 12:
         C_8 = Character_8(user_input)  
 
