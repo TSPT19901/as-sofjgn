@@ -1,1 +1,1 @@
-John = History_each_user/John.txt
+John = Password_Strength_Analyzer/History_each_user/John.txt
