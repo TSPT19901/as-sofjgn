@@ -11,5 +11,5 @@ for i in range(5):
     print("")
 print("                                         --------------------------------------------------------------------------")
 print("\n\n\n")
-#Call function
+#Call function signup/login from login_signup file.py
 login_signup.sign_up_login()

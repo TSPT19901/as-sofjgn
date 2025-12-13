@@ -1,3 +1,4 @@
+#import module to make connection each other 
 from Password_Strength_Analyzer import Password_Strength_Analyzer
 from Encryption_Decryption import Encryption_Decryption
 import os
@@ -9,7 +10,6 @@ def tool_option(username):
     loading_display()
     clear_after(0.1)
     while True:
-        
         print("\n==============================")
         print("     SECURITY TOOLKIT MENU")
         print("==============================")
@@ -31,6 +31,7 @@ def tool_option(username):
         elif choice == "2":
             pass
         elif choice == "3":
+            #get into Encryption/Decryption for using tool
             Encryption_Decryption.display_and_execute()
         elif choice == "4":
             break
