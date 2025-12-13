@@ -58,10 +58,12 @@ def display_and_execute():
     else:
         obj.load_keys()              
 
-    print("Welcome to Encryption/Decryption Tool!")
+    print("┌───────────────────────────────┐")
+    print("│      Encryption/Decryption    │")
+    print("└───────────────────────────────┘\n")    
 
     while True:
-        print("\nPlease choose an option:\n1. Encrypt text\n2. Decrypt text\n3. Exit")
+        print("\nPlease choose an option:\n[1] Encrypt text\n[2] Decrypt text\n[3] Exit")
         option = input("Option: ")
         #for option 1, when user encrypt the new text, file will override
         if option == "1":
