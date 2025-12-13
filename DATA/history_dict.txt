@@ -1,1 +1,3 @@
 John = History_each_user/John.txt
+Long = Password_Strength_Analyzer/History_each_user/Long.txt
+Pheak = Password_Strength_Analyzer/History_each_user/Pheak.txt

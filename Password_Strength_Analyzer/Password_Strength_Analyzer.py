@@ -149,7 +149,7 @@ def check_password(username):
 dict_file_history = load_data("DATA/history_dict.txt")
 
 def history_account(username): #create file for store data username with their history account
-    dict_file_history[username] = "History_each_user/" + username + ".txt"
+    dict_file_history[username] = "Password_Strength_Analyzer/History_each_user/" + username + ".txt"
     
     save_data_to_File(dict_file_history, "DATA/history_dict.txt", username,dict_file_history[username])
 

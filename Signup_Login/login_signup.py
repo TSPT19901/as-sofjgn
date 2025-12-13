@@ -99,7 +99,7 @@ def sign_up(): #Sign up account
             save_data_to_File(dict_store_account, "DATA/account.txt", username, password)
             Password_Strength_Analyzer.history_account(username)
             #create automatic history for each user after account is created
-            part = "History_each_user/" + username + ".txt"
+            part = "Password_Strength_Analyzer/History_each_user/" + username + ".txt"
             with open(part, "w"):
                 pass
             break
