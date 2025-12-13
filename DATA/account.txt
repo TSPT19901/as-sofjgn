@@ -1,4 +1,1 @@
-Long = Long123@$?
-Pheak = Pheak123@$?
-Leangsiv = Siv123@$?
 John = John123@$?**

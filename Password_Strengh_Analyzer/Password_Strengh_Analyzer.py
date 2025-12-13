@@ -94,8 +94,8 @@ class Character_12(Password):
             print("Password strengh: 95%")
             print("Excellent! But adding a special character can make it even stronger.\n\n\n")
         elif self.check_is_Num():
-            temp = 90
-            print("Password strengh: 90%")
+            temp = 50
+            print("Password strengh: 50%")
             print("Good password, but try to add more character or special character.\n\n\n")
         return temp
         
