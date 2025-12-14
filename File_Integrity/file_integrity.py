@@ -1,10 +1,10 @@
-# Simple File Integrity Checker (Beginner Version)
-
+# Import Library
 import os
 import json
 import hashlib
 from colorama import init, Fore
 from pathlib import Path
+from Tool_Option import tool_option
 
 # Initialize color output
 init(autoreset=True)
@@ -98,49 +98,57 @@ def compare_hash(file_path, current_hash):
 
 # Main program
 def main():
-    # Relative Path to Data Folder
-    folder = FILE_INTEGRITY_dir / "Import_File"
-    
-    # For input file path
-    # folder = input("Enter folder path: ")
+    tool_option.loading_display()
+    tool_option.clear_after(0.1)
 
-    if not os.path.isdir(folder):
-        print(Fore.RED + "Invalid folder path")
-        return
+    while True:
+        print("┌───────────────────────────┐")
+        print("│   File Integrity Checker  │")
+        print("└───────────────────────────┘\n")
 
-    files = list_files(folder)
+        print("    >> Press S to Start")
+        print("    >> Press E to Exit")
+        print("-----------------------------------")
 
-    if not files:
-        print(Fore.YELLOW + "No files found in this folder")
-        return
+        choice = input("Choice >> ").upper() 
+        if choice == "S":
+            print("Program Starting.")
+            
+            folder = FILE_INTEGRITY_dir / "Import_File"
+            files = list_files(folder)
 
-    # Display files
-    print(Fore.CYAN + "\nFiles found:")
-    for i, file in enumerate(files):
-        print(f"{i + 1}. {os.path.basename(file)}")
+            if not files:
+                print(Fore.YELLOW + "No files found in this folder")
+                return
 
-    # Select file
-    choice = int(input("\nSelect file number: ")) - 1
-    selected_file = files[choice]
+            print(Fore.CYAN + "\nFiles found:")
+            for i, file in enumerate(files):
+                print(f"    >> {i + 1}. {os.path.basename(file)}")
 
-    # Calculate hash
-    file_hash = cal_hash(selected_file)
-    print(Fore.CYAN + f"\nSHA-256 Hash:\n{file_hash}")
+            choice = int(input("\nSelect file number: ")) - 1
+            selected_file = files[choice]
 
-    # Choose action
-    print("\n1. Save hash")
-    print("2. Compare hash")
+            file_hash = cal_hash(selected_file)
+            print(Fore.CYAN + f"\nSHA-256 Hash:\n{file_hash}")
 
-    option = input("Choose option: ")
+            print(Fore.RED + "\nOperation:")
+            print("    >> 1. Save hash")
+            print("    >> 2. Compare hash")
 
-    if option == "1":
-        save_hash(selected_file, file_hash)
-    elif option == "2":
-        compare_hash(selected_file, file_hash)
-    else:
-        print(Fore.RED + "Invalid option")
+            option = input("\nChoose option: ")
+            if option == "1":
+                save_hash(selected_file, file_hash)
+            elif option == "2":
+                compare_hash(selected_file, file_hash)
+            else:
+                print(Fore.RED + "Invalid option")
+                continue
+        elif choice == "E":
+            print("Exiting Program.")
+            break
+        else:
+            print("Invalid Option!")
 
-
-# Run program
+# Main Guard
 if __name__ == "__main__":
     main()
