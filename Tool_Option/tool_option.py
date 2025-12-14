@@ -48,4 +48,4 @@ def loading_display():
     for i in range(10):
         sys.stdout.write("\r       Loading" + "." * (i % 4))
         sys.stdout.flush()
-        time.sleep(0.4)
+        time.sleep(0.3)
