@@ -127,19 +127,22 @@ def main():
 
             # Select file
             file_selected = False
-            while not file_selected:
+            while not file_selected:    # Only continue if file is selected
                 
                 try:
                     file_choice = int(input("\nSelect file number: ")) - 1
 
                     if file_choice < 0 or file_choice >= len(files):
                         print(Fore.RED + "Invalid number. Please select the numbers from the list.")
+                        continue
                     else:
                         selected_file = files[file_choice]
                         print(Fore.GREEN + f"File: {os.path.basename(selected_file)} selected.")
+                        break
                     
                 except ValueError:
                     print(Fore.RED + "Invalid input. Please enter a number only.")
+                    continue
 
             file_hash = cal_hash(selected_file)
             print(Fore.CYAN + f"\nSHA-256 Hash:\n{file_hash}")
